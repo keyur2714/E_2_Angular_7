@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header bg-danger">
+    Education Details
+  </div>
+  <div class="card-body">
+    <table class="table tabled-striped bg-warning">
+      <tr>
+        <th>Education</th>
+        <th>Year</th>  
+        <th>Per</th>
+      </tr>
+      <tr *ngFor="let education of educationList">
+        <td>{{education.education}}</td>
+        <td>{{education.yearOfPassing}}</td>
+        <td>{{education.per}}%</td>
+      </tr>
+    </table>
+  </div>
+</div>
