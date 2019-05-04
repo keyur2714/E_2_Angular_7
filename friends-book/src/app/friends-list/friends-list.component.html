@@ -1,0 +1,35 @@
+<table class="table table-bordered bg-secondary text-white">
+  <tr *ngIf="msg !== ''">
+    <td class="alert alert-{{msgType}}">{{msg}}</td>
+  </tr>
+  <tr>
+    <td>Name: </td>
+    <!-- <td><input type=text class="form-control" name=name #name/></td> -->
+    <td><input type=text class="form-control" name=name [(ngModel)]="name" /></td>    
+  </tr>
+  <tr>
+    <!-- <td><button (click)="addNewFriend(name.value)" class="btn btn-info">Add</button></td> -->
+    <td colspan="2">
+      <button (click)="addNewFriend()" [disabled]="editIdx > -1" class="btn btn-info m-1">Add</button>
+      <button (click)="updateFriend()" [disabled]="editIdx === -1" class="btn btn-info m-1">Update</button>
+    </td>
+  </tr>
+</table>
+
+<table class="table bg-warning table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let name of friendNames;let i=index">
+      <td>{{name}}</td>
+      <td>
+        <button class="btn btn-danger m-1" (click)="delete(i)">Delete</button>
+        <button class="btn btn-info m-1" (click)="edit(i)">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

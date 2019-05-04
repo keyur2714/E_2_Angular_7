@@ -1,0 +1,23 @@
+
+	
+	marksheet.model.ts
+		rollNo: string;
+		name : string;
+		collegeName: string;
+		result : Result;
+
+
+
+	Result{
+		subjectList: SubjectDetail[];
+		totalMarks : number;
+		per: number;
+		grade: string;
+	}
+
+	SubjectDetail {
+		subjectName: string;
+		minPassingMarks: number;
+		maxMarks: number;
+		actualMarks:number;
+	}
