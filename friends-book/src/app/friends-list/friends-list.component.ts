@@ -14,6 +14,8 @@ export class FriendsListComponent implements OnInit {
   editIdx : number = -1;
   name : string = 'hiren';
 
+  selectedName : string = '';
+
   constructor() { }
 
   ngOnInit() {
@@ -62,5 +64,9 @@ export class FriendsListComponent implements OnInit {
     this.msgType = '';
     this.name = this.friendNames[idx];
     this.editIdx = idx;
+  }
+
+  setSelectedName(name: string):void{
+    this.selectedName = name;
   }
 }

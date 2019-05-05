@@ -24,11 +24,16 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let name of friendNames;let i=index">
+    <tr *ngFor="let name of friendNames;let i=index" (click)="setSelectedName(name)" [class]="name === selectedName ? 'selected' : ''" >
       <td>{{name}}</td>
       <td>
         <button class="btn btn-danger m-1" (click)="delete(i)">Delete</button>
         <button class="btn btn-info m-1" (click)="edit(i)">Edit</button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        Selected Name is : {{selectedName}}
       </td>
     </tr>
   </tbody>

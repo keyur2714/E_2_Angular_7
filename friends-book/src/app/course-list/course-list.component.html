@@ -1,0 +1,14 @@
+<table class="table table-striped">
+    <tr>
+      <th>Id</th>
+      <th>CourseName</th>
+      <th>Fees</th>
+      <th>Trainer Name</th>
+    </tr>
+    <tr *ngFor="let course of courseList">
+      <td><a href=""><img src="../../assets/images/course/{{course.courseCode}}.jpg" width="25px" height="25px" /></a></td>
+      <td>{{course.courseName}}</td>
+      <td>{{course.fees}}</td>
+      <td>{{course.trainerName}}</td>
+    </tr>
+</table>
