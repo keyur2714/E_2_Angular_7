@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row bg-info">
+    <div class="col">
+      <h1>@Input Demo / Parent to Child</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <app-message></app-message>      
+    </div>
+    <div class="col-sm-4">
+        <app-message [message]="'Hi...!'" [messageType]="'info'"></app-message>      
+    </div>
+    <div class="col-sm-4">
+        <app-message [message]="message" [messageType]="'danger'"></app-message>      
+    </div>    
+  </div>
+  <div class="row">
+    <div class="col-sm-8">
+      <app-course-list></app-course-list>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8">
+      <app-student-list></app-student-list>
+    </div>
+  </div>
+
+</div>

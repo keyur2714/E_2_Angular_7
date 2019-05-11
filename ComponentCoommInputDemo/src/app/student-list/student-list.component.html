@@ -1,0 +1,36 @@
+<app-my-data-grid
+  [dataList]="studentList"
+  [columnList]="columnList"
+  [columnHeaderList]="columnHeaderList"
+  [listType]="'Student List'"
+  [bgColor]="'danger'"
+>
+</app-my-data-grid>
+
+<!-- <div class="card ">
+  <div class="card-header bg-warning">
+    Student List
+  </div>
+  <div class="card-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Course</th>
+          <th>Trainer Name</th>
+          <th>Fee Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of studentList">
+           <td>{{student.id}}</td> 
+           <td>{{student.name}}</td> 
+           <td>{{student.course.courseName}}</td> 
+           <td>{{student.course.trainerName}}</td> 
+           <td>{{student.feeStatus}}</td> 
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->

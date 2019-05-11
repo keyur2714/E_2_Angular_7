@@ -1,0 +1,28 @@
+<div class="card ">
+    <div class="card-header bg-{{bgColor}}">
+      {{listType}}
+    </div>
+    <div class="card-body">
+      <table class="table table-{{tableType}}">
+        <thead>
+          <tr>
+            <th *ngFor="let columnHeader of columnHeaderList">
+              {{columnHeader}}
+            </th>            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of dataList">
+             <td *ngFor="let column of columnList">               
+              <span *ngIf="column === 'course'">
+                  {{data[column]['courseName']}}
+              </span> 
+              <span *ngIf="column !== 'course'">
+                {{data[column]}}
+              </span>
+            </td>              
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
