@@ -28,7 +28,10 @@ export class FriendsListComponent implements OnInit {
 
   addNewFriend():void {
     console.log("Hello Radhe Krishna...!"+this.name);
-    if(this.friendNames.indexOf(this.name) === -1){
+    if(name === ''){
+      this.msg = "Name is not Empty.";
+      this.msgType = 'info';      
+    }else if(this.friendNames.indexOf(this.name) === -1){
       this.friendNames.push(this.name);
       this.msg = "Friend with name "+this.name+" Added Successfully.";
       this.msgType = 'success';

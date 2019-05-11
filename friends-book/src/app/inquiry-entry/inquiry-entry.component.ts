@@ -20,7 +20,7 @@ export class InquiryEntryComponent implements OnInit {
 
   ngOnInit() {
     this.courseList = this.courseService.getCourseList();
-    this.newInquiry.course = this.courseList[2];
+    this.newInquiry.course = this.courseList[0];
   }
 
   saveInquiry():void{
