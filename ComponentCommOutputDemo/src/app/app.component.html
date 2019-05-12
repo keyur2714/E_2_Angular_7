@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>{{title}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-message (getFormattedMessage)="getMessage($event)"></app-message>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-message *ngFor="let msg of messageList" [message]="msg"></app-message>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      My Message is : {{myMessage}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+        <hr />
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-sm-4">
+      <label>Contry: </label>
+    </div>
+    <div class="col-sm-4">
+      <app-my-dropdown 
+        [dataList]="countryList"
+        [entityType]="'Country'"
+        [name]="'country'"
+        [defaultSelectedIndex]="1"
+        (selectedItem)="getSelectedCountry($event)"
+      >        
+      </app-my-dropdown>
+    </div>
+  </div>
+  <div class="row form-group">
+      <div class="col-sm-4">
+        <label>State: </label>
+      </div>
+      <div class="col-sm-4">
+        <app-my-dropdown 
+          [dataList]="stateList"
+          [entityType]="'State'"
+          [name]="'state'"
+          [defaultSelectedIndex]="2"
+          (selectedItem)="getSelectedState($event)"
+        >        
+        </app-my-dropdown>
+      </div>
+  </div>
+  <div class="row form-group">
+    <div class="col">
+      <button class="btn btn-info" (click)="save()">Save</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<select class="form-control" [name]="name" [(ngModel)]="selectedData" (change)="setSelectedItem()">
+  <option value=-1>-:Select {{entityType}}:-</option>
+  <option *ngFor="let data of dataList" [ngValue]="data">
+    {{data.desc}}
+  </option>
+</select>
