@@ -6,12 +6,14 @@
   </div>
   <div class="row">
     <div class="col">
-      <app-message (getFormattedMessage)="getMessage($event)"></app-message>
+      <app-message (getFormattedMessage)="getMessage($event)">Hi...</app-message>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <app-message *ngFor="let msg of messageList" [message]="msg"></app-message>
+      <app-message *ngFor="let msg of messageList" [message]="msg">
+        Hi : {{msg}}
+      </app-message>
     </div>
   </div>
   <div class="row">
