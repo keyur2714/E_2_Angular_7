@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>{{title}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      Select Color : 
+      <select name=color class="form-control" #color (change)="changeColor()">
+        <option value=-1>-:Select Color:-</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="orange">Orange</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h3 appMyColor #h3>Hello Radhe Krishna...!</h3>
+      <p appMyColor [color]="'green'" [fontSize]="'10px'" #p>Good Morning...!</p>
+    </div>
+  </div>
+  <div class="row" *appMyIf="true">
+    <div class="col">
+      Display if all is well...!
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p *appMyLoop="7;index:5">Hi</p>
+    </div>
+  </div>
+  <p *ngIf="false;then t;else f">
+  </p>
+  <ng-template #t [appMyIf]="true">
+    You are elegible for voting...!
+  </ng-template>
+  <ng-template #f [appMyIf]="true">
+    You are not elegible for voting...!
+  </ng-template>
+  <ng-template [appMyLoop]="3" [appMyLoopIndex]="9">
+    <span>keyur</span>
+  </ng-template>
+  <ng-container *appMyIf="true">
+    <p>vicki</p>
+  </ng-container>
+</div>
