@@ -1,0 +1,87 @@
+<form #f=ngForm (ngSubmit)="save(f)">
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-6">
+        <input type="email" class="form-control" name="email"  id="email" email required [(ngModel)]="registration.email" placeholder="Email" #email=ngModel >
+      </div>
+      <div class="col-sm-4" *ngIf="email.touched && email.invalid">
+        <div *ngIf="email.errors['required']">
+          Email is Mandatory field.
+        </div>
+        <div *ngIf="email.errors['email']">
+            Email is Invalid.
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-6">
+        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="registration.password" required minlength="6" placeholder="Password" #password=ngModel >        
+      </div>
+      <div class="col-sm-4" *ngIf="password.touched && password.invalid">
+          <div *ngIf="password.errors['required']">
+            Password is Mandatory field.
+          </div>
+          <div *ngIf="password.errors['minlength']">
+              Password is min 6 Char.
+          </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="name" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="name" name="name" required pattern="^[A-Za-z]+$" [(ngModel)]="registration.name" placeholder="Name" #name=ngModel >
+        </div>
+        <div class="col-sm-4" *ngIf="name.touched && name.invalid">
+            <div *ngIf="name.errors['required']">
+              Name is Mandatory field.
+            </div>            
+            <div *ngIf="name.errors['pattern']">
+              Name is only in Alphabets.
+            </div>            
+        </div>
+    </div>
+    <fieldset class="form-group">
+      <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="M" [(ngModel)]="registration.gender" #male>
+            <label class="form-check-label" for="gridRadios1">
+              Male
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="F" [(ngModel)]="registration.gender" #female>
+            <label class="form-check-label" for="gridRadios2">
+              Female
+            </label>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button class="btn btn-primary m-1" [disabled]="f.invalid">Register</button>
+        <button class="btn btn-secondary m-1" type="reset">Reset</button>
+      </div>      
+    </div>
+  </form>
+  <div class="row" *ngIf="isSubmit">
+    <div class="col-sm-10">
+      <table class="table table-bordered">
+        <tr>
+          <td>Email:</td>
+          <td>{{registration.email}}</td>
+        </tr>  
+        <tr>
+          <td>Name:</td>
+          <td>{{registration.name}}</td>
+        </tr>  
+        <tr>
+          <td>Gender:</td>
+          <td>{{registration.gender === 'M' ? 'Male' : 'Female'}}</td>
+        </tr>  
+      </table>
+    </div>
+  </div>
