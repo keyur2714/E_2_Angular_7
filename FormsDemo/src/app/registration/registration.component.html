@@ -25,14 +25,31 @@
           <div *ngIf="password.errors['minlength']">
               Password is min 6 Char.
           </div>
+      </div>
+    </div>
+    <div class="form-group row">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Confirm Password</label>
+        <div class="col-sm-6">
+          <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" ngModel required minlength="6" placeholder="Password" #confirmPassword=ngModel (blur)="checkEq(confirmPassword.value,password.value)">        
+        </div>        
+        <div class="col-sm-4" *ngIf="errorMsg !== ''">
+          {{errorMsg}}
+        </div>
+        <div class="col-sm-4" *ngIf="confirmPassword.touched && confirmPassword.invalid">
+            <div *ngIf="confirmPassword.errors['required']">
+                Confirm Password is Mandatory field.
+            </div>
+            <div *ngIf="password.errors['minlength']">
+                Confirm Password is min 6 Char.
+            </div>
         </div>
     </div>
     <div class="form-group row">
         <label for="name" class="col-sm-2 col-form-label">Name</label>
         <div class="col-sm-6">
-          <input type="text" class="form-control" id="name" name="name" required pattern="^[A-Za-z]+$" [(ngModel)]="registration.name" placeholder="Name" #name=ngModel >
+          <input type="text" class="form-control" id="name" name="name" required pattern="^[A-Za-z]+$" [(ngModel)]="registration.name" placeholder="Name" #name=ngModel>
         </div>
-        <div class="col-sm-4" *ngIf="name.touched && name.invalid">
+        <div class="col-sm-4" *ngIf="name.touched && name.invalid">            
             <div *ngIf="name.errors['required']">
               Name is Mandatory field.
             </div>            
