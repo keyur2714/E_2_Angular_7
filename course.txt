@@ -27,9 +27,9 @@
 		- Attribute Directive -- Done
 		- Structural Directive --- Done
 	4. Forms
-		- Template Driven Forms 
-		- Reactive  Forms
-		- Forms Validations
+		- Template Driven Forms  - Done
+		- Reactive  Forms - Done
+		- Forms Validations - Done
 	5. Observables & RX JS Basic Operators
 		- interval()
 		- of()

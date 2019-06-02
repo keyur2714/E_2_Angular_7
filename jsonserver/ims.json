@@ -1,0 +1,43 @@
+{  
+  "inquiries": [
+    {
+      "id": 1,
+      "name": "ketan",
+      "mobileNo": "7287029671",
+      "email": "keyurjava27@gmail.com",
+      "course": {
+        "id": 10,
+        "courseCode": "ANG",
+        "courseName": "Angular",
+        "fees": 13800,
+        "trainerName": "Keyur"
+      }
+    },
+    {
+      "id": 2,
+      "name": "dipak",
+      "mobileNo": "7287029999",
+      "email": "dipak99@gmail.com",
+      "course": {
+        "id": 20,
+        "courseCode": "JAVA",
+        "courseName": "J2EE",
+        "fees": 14800,
+        "trainerName": "denish"
+      }
+    },
+    {
+      "id": 4,
+      "name": "praju",
+      "mobileNo": "7287029333",
+      "email": "parju27@gmail.com",
+      "course": {
+        "id": 30,
+        "courseCode": "BIGDATA",
+        "courseName": "Hadoop Dev",
+        "fees": 15800,
+        "trainerName": "vinit"
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "user_details": [
+    {
+      "id": 1,
+      "userName": "keyur27",
+      "password": "India@27",
+      "name": "keyur",
+      "userRole": "admin",
+      "gender": "male",
+      "email": "keyurjava27@gmail.com",
+      "mobileNo": "7387029671",
+      "status": "active",
+	  "token": "keyurjava27"
+    },
+    {
+      "id": 2,
+      "userName": "denish26",
+      "password": "Bharat@27",
+      "name": "denish",
+      "userRole": "user",
+      "gender": "male",
+      "email": "denishjava26@gmail.com",
+      "mobileNo": "7387029123",
+      "status": "active",
+	  "token": "denishjava26"
+    }
+  ],
+  "student": [
+    {
+      "id": 27,
+      "name": "keyur"
+    },
+    {
+      "id": 26,
+      "name": "denish"
+    },
+    {
+      "id": 44,
+      "name": "vinit"
+    },
+    {
+      "id": 4,
+      "name": "ami"
+    },
+    {
+      "id": "24",
+      "name": "darshna"
+    },
+    {
+      "id": "25",
+      "name": "Hiren"
+    },
+    {
+      "id": "28",
+      "name": "ravi"
+    },
+    {
+      "id": "14",
+      "name": "Jigs"
+    },
+    {
+      "id": "42",
+      "name": "Rujuta"
+    },
+    {
+      "id": "97",
+      "name": "Rupesh"
+    },
+    {
+      "id": "98",
+      "name": "Vicki"
+    },
+    {
+      "id": "100",
+      "name": "priyanka"
+    }
+  ]
+}
