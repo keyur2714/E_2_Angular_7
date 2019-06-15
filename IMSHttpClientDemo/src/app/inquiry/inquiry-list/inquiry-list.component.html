@@ -1,0 +1,18 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Mobile No</th>
+      <th>Course</th>      
+    </tr>
+    <tr *ngFor="let inquiry of inquiryList">
+      <td>{{inquiry.id}}</td>
+      <td>{{inquiry.name}}</td>
+      <td>{{inquiry.email}}</td>
+      <td>{{inquiry.mobileNo}}</td>
+      <td>{{inquiry.course.courseName}}</td>
+    </tr>
+  </thead>
+</table>
