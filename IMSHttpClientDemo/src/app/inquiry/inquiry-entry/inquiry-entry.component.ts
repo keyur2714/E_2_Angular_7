@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { CourseService } from '../course.service';
 import { Course } from '../course.model';
@@ -12,6 +12,9 @@ import { InquiryService } from '../inquiry.service';
 })
 export class InquiryEntryComponent implements OnInit {
 
+  @Input("id")
+  selectedId : number = 0;
+
   newInquiry : Inquiry = new Inquiry();
   inquiryForm : FormGroup = new FormGroup({});
   courseList : Course[] = [];
@@ -24,14 +27,13 @@ export class InquiryEntryComponent implements OnInit {
         this.courseList = data;
         this.createInquiryForm();  
       }
-    );      
-    this.createInquiryForm();  
+    );              
   }
 
   createInquiryForm(){
     this.inquiryForm = this.formBuilder.group(
       {
-        id : this.formBuilder.control(''),
+        inquiryId : this.formBuilder.control(0),
         name : this.formBuilder.control(''),
         email : this.formBuilder.control(''),
         mobileNo : this.formBuilder.control(''),
@@ -39,12 +41,22 @@ export class InquiryEntryComponent implements OnInit {
       }      
     );    
     this.inquiryForm.patchValue({"course":this.courseList[1]});
+    if(this.selectedId > 0){
+      alert(this.selectedId);
+      this.inquiryService.getInquiriesById(this.selectedId).subscribe(
+        (inquiry: Inquiry)=>{
+          console.log(JSON.stringify(inquiry));
+          this.inquiryForm.setValue({inquiryId : inquiry.id,name : inquiry.name,email : inquiry.email,mobileNo : inquiry.mobileNo, course : inquiry.course});
+        }
+      )
+    }
   }
 
   save():void {
     console.log(this.inquiryForm.value);
     if(this.inquiryForm.valid){
       this.newInquiry = this.inquiryForm.value;
+      this.newInquiry.id = this.inquiryForm.get("inquiryId").value;
       this.inquiryService.save(this.newInquiry).subscribe(
         (data)=>{
           console.log(data+'=====');

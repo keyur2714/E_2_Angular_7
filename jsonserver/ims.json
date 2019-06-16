@@ -37,33 +37,20 @@
       }
     },
     {
-      "id": 2,
       "name": "dipak",
-      "mobileNo": "7287029999",
       "email": "dipak99@gmail.com",
+      "mobileNo": "7287029888",
       "course": {
         "id": 20,
         "courseCode": "JAVA",
         "courseName": "J2EE",
         "fees": 14800,
         "trainerName": "denish"
-      }
+      },
+      "id": 2
     },
     {
-      "id": 4,
-      "name": "praju",
-      "mobileNo": "7287029333",
-      "email": "parju27@gmail.com",
-      "course": {
-        "id": 30,
-        "courseCode": "BIGDATA",
-        "courseName": "Hadoop Dev",
-        "fees": 15800,
-        "trainerName": "vinit"
-      }
-    },
-    {
-      "id": "3",
+      "id": 3,
       "name": "sachin",
       "email": "sachin.cricket@gmail.com",
       "mobileNo": "9879534778",
@@ -73,6 +60,19 @@
         "courseName": "Hadoop Dev",
         "fees": 15800,
         "trainerName": "vinit"
+      }
+    },
+    {
+      "id": 4,
+      "name": "keyur",
+      "email": "keyurjava27@gmail.com",
+      "mobileNo": "8600712124",
+      "course": {
+        "id": 20,
+        "courseCode": "JAVA",
+        "courseName": "J2EE",
+        "fees": 14800,
+        "trainerName": "denish"
       }
     }
   ]

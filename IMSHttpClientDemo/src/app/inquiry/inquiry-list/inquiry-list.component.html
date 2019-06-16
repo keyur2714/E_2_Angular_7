@@ -1,3 +1,50 @@
+<div class="row" *ngIf="successMessage !== ''" class="alert alert-success"> 
+    {{successMessage}}
+</div> 
+  <form [formGroup]="inquiryForm" (ngSubmit)="save()">    
+    <div class="row form-group">
+      <div class="col-sm-2">
+        <label>Name : </label>      
+      </div>
+      <div class="col-sm-4">
+        <input type=text formControlName="name" name="name" class="form-control"/>
+      </div>    
+    </div>
+    <div class="row form-group">
+      <div class="col-sm-2">
+        <label>Email : </label>      
+      </div>
+      <div class="col-sm-4">
+        <input type=text formControlName="email" name="email" class="form-control"/>
+      </div>    
+    </div>
+    <div class="row form-group">
+      <div class="col-sm-2">
+        <label>Mobile No : </label>      
+      </div>
+      <div class="col-sm-4">
+        <input type=text formControlName="mobileNo" name="mobileNo" class="form-control"/>
+      </div>    
+    </div>
+    <div class="row form-group">
+      <div class="col-sm-2">
+        <label>Course : </label>      
+      </div>
+      <div class="col-sm-4">
+        <select formControlName="course" name="course" class="form-control">          
+          <option *ngFor="let course of courseList" [ngValue]="course">
+            {{course.courseName}}
+          </option>
+        </select>
+      </div>    
+    </div>
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-info" *ngIf="! isUpdate">Save</button>
+        <button type=button class="btn btn-info" *ngIf="isUpdate" (click)="update()">Update</button>        
+      </div>
+    </div>
+  </form>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -6,6 +53,7 @@
       <th>Email</th>
       <th>Mobile No</th>
       <th>Course</th>      
+      <th>Action</th>
     </tr>
     <tr *ngFor="let inquiry of inquiryList">
       <td>{{inquiry.id}}</td>
@@ -13,6 +61,10 @@
       <td>{{inquiry.email}}</td>
       <td>{{inquiry.mobileNo}}</td>
       <td>{{inquiry.course.courseName}}</td>
+      <td>
+        <button type="button" class="btn btn-success m-1" (click)="edit(inquiry.id)">Edit</button>
+        <button type="button" class="btn btn-danger m-1" (click)="delete(inquiry.id)">Delete</button>
+      </td>
     </tr>
   </thead>
 </table>
