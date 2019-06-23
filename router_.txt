@@ -1,0 +1,40 @@
+
+RouterModule - is a separate module in angular that 
+provides required 
+services and 
+directives to use routing and navigation in angular application
+
+Routes - defines and array of roots that map a path to 
+a component.
+ Paths are configured in module to make available it globally.
+ 
+ Router - . It is used to navigate from one component to another component. 
+ 
+ ActivatedRoute -  is an angular service that contains route 
+specific information such as route parameters,
+
+ global query params etc.
+ 
+ Params - is an angular router API that contains the 
+parameter value. 
+ To get the parameter value from Params we need to pass key.
+
+QueryParams: 
+ 
+ Location - is a service that is used to interact with browser URL for 
+example navigating back and forward.
+ 
+ Location - has methods such as go(), forward() and back() etc. 
+--- 
+ RouterLink - is a directive that is used to bind a route with 
+clickable HTML element. 
+ 
+ RouterLinkActive - is a directive that is used to add or remove CSS classes. 
+ 
+ When the HTML element with RouterLink binding is clicked then the CSS classes bound with 
+RouterLinkActive will be active.
+ 
+ RouterOutlet - is a directive that is used as <router-outlet>. 
+The role of <router-outlet> is to mark where the router displays a view.
+ 
+ 
