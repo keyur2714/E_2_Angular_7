@@ -1,3 +1,24 @@
-<p>
-  sign-in works!
-</p>
+<form [formGroup]="loginForm" (ngSubmit)="authenticate()">
+  <div class="row form-group">
+    <div class="col-sm-8 alert alert-danger" *ngIf="errorMessage !== ''">
+      {{errorMessage}}
+    </div>
+  </div>  
+  <div class="row form-group">
+    <div class="col-sm-3">Username: </div>
+    <div class="col-sm-5"><input type=text name=userName formControlName="userName" class="form-control"/></div>
+    <div class="col-sm-4" *ngIf="loginForm.get('userName').invalid && loginForm.get('userName').touched">
+      Username is required field.
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-sm-3">Password: </div>
+    <div class="col-sm-5"><input type=password name=password formControlName="password" class="form-control"/></div>
+    <div class="col-sm-4" *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
+      Password is required field.
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-sm-6"><button class="btn btn-info" [disabled]="loginForm.invalid">Login</button></div>
+  </div>
+</form>

@@ -14,9 +14,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  logout():void {
-    this.router.navigate(['/logout'],{queryParams : {fromAction : 'home'}});
-  }
+  // logout():void {
+  //   this.router.navigate(['/logout'],{queryParams : {fromAction : 'home'}});
+  // }
 
   back():void {
     this.location.back();

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shopping-app';
+
+  isLoggedIn : boolean = false;
+
+  constructor(private authService : AuthService){}
+
+  activate():void {
+    this.isLoggedIn = this.authService.isLoggedIn;
+  }
 }

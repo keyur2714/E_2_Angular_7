@@ -16,8 +16,11 @@
     <li class="nav-item">
       <a class="nav-link" [routerLink]="'contact-us'" [routerLinkActive]="'active'">Contact Us</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" *ngIf="! isLoggedIn">
       <a class="nav-link" [routerLink]="'signin'" [routerLinkActive]="'active'">Sign In</a>
+    </li>
+    <li class="nav-item" *ngIf="isLoggedIn">
+        <a class="nav-link" [routerLink]="'logout'" [routerLinkActive]="'active'">Sign Out</a>
     </li>
   </ul>
 
