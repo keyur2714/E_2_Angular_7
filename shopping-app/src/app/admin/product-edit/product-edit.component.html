@@ -1,0 +1,35 @@
+<form #frm=ngForm (ngSubmit)="update(frm)">
+  <div class="row" *ngIf="message !== ''">
+    <div class="col alert alert-info">
+      {{message}}
+    </div>    
+  </div>
+  <div class="row form-group">
+    <div class="col-sm-3"><label>Id:</label></div>
+    <div class="col-sm-5"><label>{{product.id}}</label></div>
+  </div>
+  <div class="row form-group">
+    <div class="col-sm-3"><label>Code:</label></div>
+    <div class="col-sm-5"><label>{{product.code}}</label></div>
+  </div>
+  <div class="row form-group">
+    <div class="col-sm-3"><label>Desc:</label></div>
+    <div class="col-sm-5"><input type=text name=desc #desc=ngModel [(ngModel)]="product.desc" required class="form-control"/></div>
+    <div class="col-sm-4" *ngIf="desc.invalid && desc.touched">
+      Description is required field.
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-sm-3"><label>Unit Price:</label></div>
+    <div class="col-sm-5"><input type=text name=unitPrice #unitPrice=ngModel [(ngModel)]="product.unitPrice" required class="form-control"/></div>
+    <div class="col-sm-4" *ngIf="unitPrice.invalid && unitPrice.touched">
+      Unit Price is required field.
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <button class="btn btn-info m-1">Update</button>
+      <button class="btn btn-secondary m-1" type="button" (click)="back()">Back</button>
+    </div>
+  </div>
+</form>

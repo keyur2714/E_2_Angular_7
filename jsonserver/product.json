@@ -1,60 +1,60 @@
 {
-	"user_details": [
-		{
-		  "id": 1,
-		  "userName": "keyur27",
-		  "password": "India@27",
-		  "name": "keyur",
-		  "userRole": "admin",
-		  "gender": "male",
-		  "email": "keyurjava27@gmail.com",
-		  "mobileNo": "7387029671",
-		  "status": "active",
-		  "token": "keyurjava27"
-		},
-		{
-		  "id": 2,
-		  "userName": "denish26",
-		  "password": "Bharat@27",
-		  "name": "denish",
-		  "userRole": "user",
-		  "gender": "male",
-		  "email": "denishjava26@gmail.com",
-		  "mobileNo": "7387029123",
-		  "status": "active",
-		  "token": "denishjava26"
-		}
-    ],	
-	"products" : [
-		{
-			"id": 10,
-			"code": "TEA",
-			"desc": "Masala Tea",
-			"unitPrice": 10	
-		},
-		{
-			"id": 20,
-			"code": "COFFEE",
-			"desc": "Filter Coffee",
-			"unitPrice": 20	
-		},
-		{
-			"id": 30,
-			"code": "BM",
-			"desc": "Bun Maska",
-			"unitPrice": 10	
-		},
-		{
-			"id": 40,
-			"code": "CR",
-			"desc": "Cream Roll",
-			"unitPrice": 10	
-		},		
-		{
-			"id": 50,
-			"code": "VP",
-			"desc": "Veg Puff",
-			"unitPrice": 15	
-		}
-	]
+  "user_details": [
+    {
+      "id": 1,
+      "userName": "keyur27",
+      "password": "India@27",
+      "name": "keyur",
+      "userRole": "admin",
+      "gender": "male",
+      "email": "keyurjava27@gmail.com",
+      "mobileNo": "7387029671",
+      "status": "active",
+      "token": "keyurjava27"
+    },
+    {
+      "id": 2,
+      "userName": "denish26",
+      "password": "Bharat@27",
+      "name": "denish",
+      "userRole": "user",
+      "gender": "male",
+      "email": "denishjava26@gmail.com",
+      "mobileNo": "7387029123",
+      "status": "active",
+      "token": "denishjava26"
+    }
+  ],
+  "products": [
+    {
+      "id": 10,
+      "code": "TEA",
+      "desc": "Masala Tea",
+      "unitPrice": 10
+    },
+    {
+      "id": 20,
+      "code": "COFFEE",
+      "desc": "Filter Coffee",
+      "unitPrice": 20
+    },
+    {
+      "id": 30,
+      "code": "BM",
+      "desc": "Bun Maska",
+      "unitPrice": "15"
+    },
+    {
+      "id": 40,
+      "code": "CR",
+      "desc": "Cream Roll",
+      "unitPrice": 10
+    },
+    {
+      "id": 50,
+      "code": "VP",
+      "desc": "Veg Puff",
+      "unitPrice": 15
+    }
+  ]
 }

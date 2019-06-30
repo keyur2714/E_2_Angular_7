@@ -20,12 +20,12 @@ export class AdminComponent implements OnInit {
     //   }
     // )
 
-    this.activatedRoute.paramMap.subscribe(
-      (paramMap)=>{
-        console.log(paramMap);
-        this.id = parseInt(paramMap.get('id'));
-      }
-    )
+    // this.activatedRoute.paramMap.subscribe(
+    //   (paramMap)=>{
+    //     console.log(paramMap);
+    //     this.id = parseInt(paramMap.get('id'));
+    //   }
+    // )
   }
 
 }
