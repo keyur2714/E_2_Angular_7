@@ -1,10 +1,33 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { User } from './user.model';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class AuthService {
+
+    private appURL : string = 'http://localhost:3000/user_details';
+
     private _isLoggedIn : boolean = false;
     private _loggedInUserRole : string = '';
     private _successUrl : string = 'home';
+
+    constructor(private httpClient : HttpClient){}
+
+    authenticateN(userName : string,password : string):Observable<any>{
+        return this.httpClient.get<any>(this.appURL).pipe(
+            map(users=> {
+                for(let user of users){
+                    if(user.userName === userName && user.password === password){
+                        this._isLoggedIn = true;
+                        this._loggedInUserRole = user.userRole;
+                        return user;
+                    }
+                }                
+            })
+        );                            
+    }
 
     authenticate(userName : string,password : string):boolean{        
         if(userName === 'keyur27' && password === 'denish'){

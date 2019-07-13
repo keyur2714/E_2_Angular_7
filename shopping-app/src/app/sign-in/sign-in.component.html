@@ -1,4 +1,4 @@
-<form [formGroup]="loginForm" (ngSubmit)="authenticate()">
+<form [formGroup]="loginForm" (ngSubmit)="authenticateN()">
   <div class="row form-group">
     <div class="col-sm-8 alert alert-danger" *ngIf="errorMessage !== ''">
       {{errorMessage}}

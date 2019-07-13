@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Student } from './student.model';
-import { of, Observable } from 'rxjs';
-import { map, filter } from 'rxjs/operators';
+import { of, Observable , from } from 'rxjs';
+import { map, filter,  } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,30 @@ import { map, filter } from 'rxjs/operators';
 export class StudentsService {
 
   constructor() { }
+
+  getFriends() : Observable<any> {
+    let friends : string[] = ["keyur","denish","vinit","hiren","ravi"];
+    return from(friends);
+  }
+
+  getSelectedFrineds() : Observable<any> {    
+      // this.getFriends().subscribe(
+      //   (data)=>{
+      //     alert(data +" **");
+      //   }
+      // );
+      return this.getFriends().pipe(        
+        filter(name =>{
+          if(name !== 'denish'){
+            return true;
+          }
+        }
+        ),
+        map(name =>{
+          return name;
+        })    
+      ); 
+  }
 
   getStudentList() : Observable<Student[]>{
     let stud1 = new Student();

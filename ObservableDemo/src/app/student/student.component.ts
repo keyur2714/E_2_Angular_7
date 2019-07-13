@@ -18,6 +18,15 @@ export class StudentComponent implements OnInit {
         this.studentNames = names;
       }
     )
+
+    this.studentsService.getSelectedFrineds().subscribe(
+      (data)=>{
+        alert(data+" *** ");
+      },
+      (error)=>{
+
+      }
+    );
   }
 
 }

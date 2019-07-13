@@ -23,6 +23,7 @@ export class LogoutComponent implements OnInit {
     // )    
     this.authService.isLoggedIn = false;
     this.authService.successUrl = 'home';    
+    sessionStorage.removeItem('token');
     this.router.navigate(['/signin']);
   }
 

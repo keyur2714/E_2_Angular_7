@@ -18,8 +18,11 @@ export class AuthGuard implements CanActivate , CanActivateChild{
         return false;
     }
 
-    canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | import("@angular/router").UrlTree | import("rxjs").Observable<boolean | import("@angular/router").UrlTree> | Promise<boolean | import("@angular/router").UrlTree> {
-        alert("From Child Route");
+    canActivateChild(childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | import("@angular/router").UrlTree | import("rxjs").Observable<boolean | import("@angular/router").UrlTree> | Promise<boolean | import("@angular/router").UrlTree> {        
+        if(this.authService.loggedInUserRole === 'user'){
+            alert("Sorry but you do not have permission to perform this operations.");
+            return false;
+        }
         return true;
     }
 }

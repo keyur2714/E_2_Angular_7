@@ -17,6 +17,7 @@ export class SignInComponent implements OnInit {
 
   ngOnInit() {
     this.createLoginForm();
+    this.authenticateN();
   }
 
   createLoginForm(){
@@ -26,7 +27,26 @@ export class SignInComponent implements OnInit {
     })
   }
 
-  authenticate():void{
+  authenticateN() : void{
+    if(this.loginForm.valid){
+      this.authService.authenticateN(this.loginForm.get('userName').value,this.loginForm.get('password').value).subscribe(
+        (data)=>{
+          console.log(JSON.stringify(data)+" =======");
+          if(data !== undefined) {
+            this.router.navigate([this.authService.successUrl]);            
+            sessionStorage.setItem("token",data.token);
+          }else{
+             this.errorMessage = 'Invalid Username or Password.';
+          }        
+        },
+        (error)=>{
+          //Server Error
+        }
+      )  
+    }    
+  }
+
+  authenticate():void{    
     if(this.loginForm.valid){
       if(this.authService.authenticate(this.loginForm.get('userName').value,this.loginForm.get('password').value)){
         this.router.navigate([this.authService.successUrl]);
