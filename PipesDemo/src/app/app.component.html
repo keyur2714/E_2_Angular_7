@@ -1,0 +1,24 @@
+<h1>{{title}}</h1>
+
+<p>
+  {{person.name | uppercase | lowercase | uppercase | welcome}}
+</p>
+<h3>
+  {{today | date : 'dd-MMM-yyyy hh:mm:ss a' | uppercase}}
+</h3>
+<p>
+  {{person | json}}
+</p>
+<h2>
+  {{numberObservable | async}}
+</h2>
+<p>
+  {{person.city | uppercase | loop : 7}}
+</p>
+<h1>
+  {{person.accNo | mask : '$' : 3}}
+</h1>
+
+<p [ngClass]="person.grade | status">
+  Your Grade is {{person.grade | uppercase}}
+</p>

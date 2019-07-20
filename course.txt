@@ -49,7 +49,7 @@
 		- Delete
 	8. Session Storage/Local Storage & Cookie Understanding
 	9. JWT Introduction 
-	10. Interceptor in HttpClientModule with Login Authentication
+	10. Interceptor in HttpClientModule with Login Authentication - Done
 	11.Router - For Navigation	- Done
 	12.Route Guards - for Authorizations - Done 
 	13. Custom Modules and it's communications
