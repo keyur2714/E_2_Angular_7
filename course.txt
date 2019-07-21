@@ -30,7 +30,7 @@
 		- Template Driven Forms  - Done
 		- Reactive  Forms - Done
 		- Forms Validations - Done
-	5. Observables & RX JS Basic Operators
+	5. Observables & RX JS Basic Operators - Done
 		- interval()
 		- of()
 		- map()
@@ -39,24 +39,24 @@
 		- Subscription()
 		- tap()
 		- Pipe()
-	6. DI (Dependency Injection) & Services
-	7. JSON Server - for create dummy web services
-		- How to use POST MAN
-	7. Http Client Module (CRUD) - 
+	6. DI (Dependency Injection) & Services - Done
+	7. JSON Server - for create dummy web services - Done
+		- How to use POST MAN - Done
+	7. Http Client Module (CRUD) - Done
 		- Get
 		- Post
 		- Put
 		- Delete
-	8. Session Storage/Local Storage & Cookie Understanding
-	9. JWT Introduction 
+	8. Session Storage/Local Storage & Cookie Understanding - Done
+	9. JWT Introduction - Done 
 	10. Interceptor in HttpClientModule with Login Authentication - Done
 	11.Router - For Navigation	- Done
 	12.Route Guards - for Authorizations - Done 
-	13. Custom Modules and it's communications
-	14. Lazy Loading & Eager Loading in Modules
-	15. Pipes - for Data Transform. it's like Filter
-		- Inbuilt Pipes
-		- Custom Pipes
+	13. Custom Modules and it's communications - Done
+	14. Lazy Loading & Eager Loading in Modules - Done
+	15. Pipes - for Data Transform. it's like Filter - Done
+		- Inbuilt Pipes - Done
+		- Custom Pipes - Done
 	16. Angular Material
 		- setup	
 		- how to use basic component
