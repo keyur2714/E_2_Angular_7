@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row form-group">
+    <div class="col">
+      <h1>{{title}} ==== {{seqNom}}</h1>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col">
+      <button class="btn btn-info" (click)="toggleState()">Toggle State</button>
+    </div>
+  </div>
+  <div class="row form-group" style="width: 100px;height: 100px;" [@stateTrigger]="state">       
+  </div>
+  <div [class]="'loader'" style="width: 100px;height: 100px;" *ngIf="seqNom<=10">       
+  </div>
+  <div class="row form-group" [@onOff2Trigger]="tableState">
+    <div class="col">
+      <table class="table table-bordered text-white">
+        <tr>
+          <th>Name</th>
+        </tr>
+        <tr *ngFor="let name of names">
+          <td>{{name}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

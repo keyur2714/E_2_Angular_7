@@ -69,5 +69,5 @@
 		- Karma
 	19. E2E Testing Undrestanding
 	20. Basic Usecase Project with Forms Module/Http Client Module/Router and Login authentication & authorization 
-	21. Deployments with some Local Server like Tomcat/WAMP
+	21. Deployments with some Local Server like Tomcat/WAMP ---- Done
 			
