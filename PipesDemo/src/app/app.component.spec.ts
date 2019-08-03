@@ -1,9 +1,11 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, inject } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { StatusPipe } from './status.pipe';
 import { MaskPipe } from './mask.pipe';
 import { LoopPipe } from './loop.pipe';
 import { WelcomePipe } from './pipes/welcome-pipe';
+import { Location } from '@angular/common';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -15,6 +17,12 @@ describe('AppComponent', () => {
         MaskPipe,
         StatusPipe
       ],
+      imports: [
+        HttpClientModule
+      ],
+      providers:[
+        HttpClient
+      ]
     }).compileComponents();
   }));
 

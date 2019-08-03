@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, interval } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,9 @@ export class AppComponent implements OnInit{
   seqNum : number = 0;
 
   numberObservable : Observable<number> = interval(1000);
+
+
+  constructor(private http:HttpClient){}
 
   person = {
     name : 'keyur',
