@@ -9,6 +9,11 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to PipesDemo!');
+    expect(page.getTitleText()).toEqual('Welcome PipesDemo');
+  });
+
+  it('should display India message', () => {
+    page.navigateTo();
+    expect(page.getParagraphText()).toEqual('India');
   });
 });

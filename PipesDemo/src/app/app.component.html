@@ -1,4 +1,6 @@
-<h1>{{title}}</h1>
+<h1>{{title | welcome}}</h1>
+
+<h4>India</h4>
 
 <p>
   {{person.name | uppercase | lowercase | uppercase | welcome}}
@@ -9,9 +11,9 @@
 <p>
   {{person | json}}
 </p>
-<h2>
+<!-- <h2>
   {{numberObservable | async}}
-</h2>
+</h2> -->
 <p>
   {{person.city | uppercase | loop : 7}}
 </p>

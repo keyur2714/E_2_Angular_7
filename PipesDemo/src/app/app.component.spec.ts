@@ -1,11 +1,19 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { StatusPipe } from './status.pipe';
+import { MaskPipe } from './mask.pipe';
+import { LoopPipe } from './loop.pipe';
+import { WelcomePipe } from './pipes/welcome-pipe';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        WelcomePipe,
+        LoopPipe,
+        MaskPipe,
+        StatusPipe
       ],
     }).compileComponents();
   }));
@@ -26,6 +34,12 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to PipesDemo!');
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome PipesDemo');
+  });
+
+  it('should check sum method', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.sum(5,5)).toEqual(10);
   });
 });
